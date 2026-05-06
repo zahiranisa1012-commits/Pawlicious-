@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Hasil</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section class="container">
+    <h1>Data Responden</h1>
+
+    <p><b>Nama:</b> <span id="nama"></span></p>
+    <p><b>Email:</b> <span id="email"></span></p>
+
+    <a href="index.html">Kembali ke Home</a>
+</section>
+
+<script>
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById("nama").innerText = params.get("nama");
+    document.getElementById("email").innerText = params.get("email");
+</script>
+
+</body>
+</html>
